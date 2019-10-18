@@ -99,9 +99,14 @@ function getEquation(x1, y1, x2, y2) {
     //Intercept
     let xInt = y1 - (slope * x1);
 
-    if (xInt == 0) {
-        return 'y = ' + slope + 'x';
+    if (x1 == x2) {
+        return 'x = ' + x1;
+    } else if (y1 == y2) {
+        return 'y = ' + y1;
     } else {
-        return 'y = ' + slope + 'x' + " " + "+" + xInt;
+        return 'y = ' + slope + 'x' + " +" + xInt;
     }
 }
+
+
+
